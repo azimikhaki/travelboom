@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ff9800;
+  --font-color: #333;
+  --background-color: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--font-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+button,
+i {
+  cursor: pointer;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(10, 30, 34, 0.92),
+    rgba(10, 30, 34, 0.8)
+  );
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  color: #ffffff;
+  padding: 10px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.logo img {
+  height: 70px;
+}
+
+nav {
+  display: flex;
+  gap: 2.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 30px;
+  background: white;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  min-width: 280px;
+}
+
+.search input::placeholder {
+  color: #017477;
+}
+
+.search button {
+  color: white;
+  background: #017477;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+main {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      to right,
+      rgba(13, 83, 89, 0.95) 0%,
+      rgba(13, 83, 89, 0.85) 30%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0) 80%
+    ),
+    url("img/bg.png") no-repeat center fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  color: #fff;
+}
+
+main#home {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  color: #fff;
+  padding-top: 100px;
+}
+main .part1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8em;
+  min-height: 75vh;
+  margin-left: 20px;
+}
+main .part1 .vertical-line {
+  height: 260px;
+  border: 1px solid white;
+}
+main .part1 .social-media-icons {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  align-items: center;
+  gap: 32px;
+}
+
+main .part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+main .part2 h1 {
+  line-height: 1.2;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 5em;
+}
+main#home .part2 p {
+  width: 350px;
+}
+main#home .part2 #booking-btn {
+  align-self: flex-start;
+  background: #017579;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+/* //////////////////////////// */
+/* About Us */
+#visible-off {
+  visibility: hidden;
+}
+main#about-us .part1 {
+  min-height: 65vh;
+  margin-left: 20px;
+}
+main .part2 {
+  padding-right: 100px;
+  margin-right: 250px;
+  margin-left: 100px;
+}
+main#about-us .part2 .slogan {
+  background: rgba(0, 0, 0, 0.47);
+  padding: 10px;
+  border-radius: 8px;
+}
+main#about-us .part2 .team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+main#about-us .part2 .team h2 {
+  font-size: 3em;
+  font-weight: 800;
+}
+main#about-us .part2 .team .members {
+  display: flex;
+  gap: 20px;
+}
+main#about-us .part2 .team .members {
+  display: flex;
+}
+.card {
+  background: rgba(0, 0, 0, 0.47);
+  padding: 20px;
+  border-radius: 18px;
+  display: flex;
+  gap: 10px;
+}
+.card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+button {
+  background: #017579;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background 0.3s ease;
+}
+
+/* //////////////////////////////// */
+/* Contact Us */
+main.contact-us .part2 {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+main.contact-us .part3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.47);
+  padding: 20px;
+  border-radius: 16px;
+  margin-right: 80px;
+  flex: 1;
+}
+main.contact-us .part3 input,
+main.contact-us .part3 textarea {
+  min-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid darkgray;
+  outline: none;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  resize: vertical;
+}
+main.contact-us .part3 input::placeholder,
+main.contact-us .part3 textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
